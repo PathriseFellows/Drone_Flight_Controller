@@ -44,7 +44,7 @@ class Landing(BaseTask):
         # Prepare state vector (pose only; ignore angular_velocity, linear_acceleration)
         state = np.array([
                 pose.position.x, pose.position.y, pose.position.z,
-                pose.orientation.x, pose.orientation.y, pose.orientation.z, pose.orientation.w
+                pose.orientation.x, pose.orientation.y, pose.orientation.z, pose.orientation.w,
                 linear_acceleration.x, linear_acceleration.y, linear_acceleration.z]).reshape(1, -1)
 
         # Compute reward / penalty and check if this episode is complete
